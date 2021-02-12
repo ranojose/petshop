@@ -26,7 +26,7 @@ const products = require('./routes/product');
 const auth = require('./routes/auth');
 const payment = require('./routes/payment');
 const order = require('./routes/order');
-//const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 
 //settingup config file
 dotenv.config({ path: 'backend/config/config.env' })
