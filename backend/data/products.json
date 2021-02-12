@@ -1,0 +1,50 @@
+
+[
+    {
+        "name" : "KIKI",
+        "price" : "1.50",
+        "description" : "cute",
+        "ratings" : 4.5,
+        "images" : [{
+            "public_id" :"products/tzfsnrli3szrdnb4jgge",
+            "url" : "https://i.ibb.co/DgqPb2X/kiki.jpg" 
+        }],
+        "category" : "electronics",
+        "seller" : "Free shipping",
+        "stock" : 131,
+        "numofReviews" : 222,
+        "reviews" : []
+    },
+   
+    {
+    "name" : "elsa/yuri/amber/turbo",
+        "price" : "100",
+        "description" : "malambing",
+        "ratings" : 4.5,
+        "images" : [{
+            "public_id" :"products/tzfsnrli3szrdnb4jgge",
+            "url" : "https://i.ibb.co/fFr3wNz/128801585-197872465246544-2527352077916036279-n.jpg"
+        }],
+        "category" : "electronics",    
+        "seller" : "Free shipping",
+        "stock" : 131,
+        "numofReviews" : 222,
+        "reviews" : []
+        },
+        {
+            "name" : "turbo",
+                "price" : "0.5",
+                "description" : "cute",
+                "ratings" : 4.5,
+                "images" : [{
+                    "public_id" :"products/tzfsnrli3szrdnb4jgge",
+                    "url" : "https://i.ibb.co/Htgg1Py/145579571-1834250350084466-1317698889931879355-n.jpg"
+                }],
+                "category" : "electronics",     
+                "seller" : "Free shipping",
+                "stock" : 131,
+                "numofReviews" : 222,
+                "reviews" : []
+                }
+
+    ]

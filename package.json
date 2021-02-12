@@ -1,0 +1,35 @@
+{
+  "name": "projectwebsite",
+  "version": "1.0.0",
+  "description": "eccomerce site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server",
+    "seeder": "node backend/utils/seeder.js",
+    "heroku:postbuild" : "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "Jose Rano gesite",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body": "^5.1.0",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.24.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.12",
+    "nodemailer": "^6.4.17",
+    "parser": "^0.1.4",
+    "serve-static": "^1.14.1",
+    "stripe": "^8.134.0",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
