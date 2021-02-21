@@ -3,10 +3,37 @@ const ErrorHandler = require('../utils/errorhandler');
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
 const sendToken = require('../utils/jwtToken');
 const sendEmail = require('../utils/sendEmail');
-const crypto = require('crypto')
+const crypto = require('crypto');
+const emailValidator = require('email-deep-validator');
 
 
+//Register  a user =>  /api/v1/register/vaidation
+exports.registervalidation = catchAsyncErrors(async (req, res, next) => {
 
+   const {email, password} = req.body;
+
+   if (!email || !password){
+    return res.status(400).send({
+        message: "Email or password missing."
+    })
+}
+  
+
+   const {valid, reason, validators} = await isEmailValid(email);
+   async function isEmailValid(email) {
+    return emailValidator.validate(email)       
+}
+
+   if(valid) return res.send({message: "OK"});
+
+    return res.status(400).send({
+        message: "Please provide a valid email address.",
+        reason: validators[reason].reason
+    })
+    
+});
+ 
+   
 //Register  a user =>  /api/v1/register
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 
@@ -25,7 +52,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 
 exports.loginUser = catchAsyncErrors( async (req, res, next) =>  {
     const { email, password } = req.body;
-
+    
     //check if emails and password is entered by user
     if(!email || !password) {
         return next(new ErrorHandler('Please enter email & password', 400))
@@ -247,3 +274,6 @@ exports.loginUser = catchAsyncErrors( async (req, res, next) =>  {
         })
     })
     
+    
+
+

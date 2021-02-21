@@ -18,7 +18,7 @@ import Cart from './components/cart/Cart'
 import Shipping from './components/cart/Shipping'
 import ConfirmOrder from './components/cart/ConfirmOrder';
 import Payment from './components/cart/Payment';
-import axios from 'axios'
+import axios from 'axios';
 import ListOrders from './components/order/ListOrders'
 import { useDispatch, useSelector } from 'react-redux';
  

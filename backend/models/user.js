@@ -3,6 +3,10 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs'); 
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
+const express = require('express');
+const router = express.Router();
+const emailValidator = require('email-deep-validator');
+
 
 
 const userSchema = new mongoose.Schema({
@@ -45,6 +49,7 @@ const userSchema = new mongoose.Schema({
             resetPasswordExpire: Date
 
 })
+
 
 //encrypting pass before saving user
 userSchema.pre('save', async function (next) {

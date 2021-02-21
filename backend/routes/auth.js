@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
  
 const { registerUser, 
+    registervalidation,
     loginUser, 
     forgotPassword, 
     resetPassword, 
@@ -18,7 +19,7 @@ const { registerUser,
 
  const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth')
 
-router.route('/register').post(registerUser);
+router.route('/register').post(registervalidation, registerUser);
 router.route('/login').post(loginUser);
 
 router.route('/password/forgot').post(forgotPassword)

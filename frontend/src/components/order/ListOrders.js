@@ -84,7 +84,7 @@ const ListOrders = () => {
                     <MDBDataTable
                     data={setOrders()}
                     className="px-3"
-                    bordered
+                    bordered    
                     striped
                     hover
                     />
